@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Portal - Course Catalog</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9ff",
+                        "secondary": "#575f65",
+                        "on-primary-container": "#799dd6",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9ff",
+                        "surface-dim": "#d1dbec",
+                        "on-tertiary-container": "#4f3e00",
+                        "secondary-fixed": "#dbe3ea",
+                        "secondary-container": "#dbe3ea",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#dfe9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#a7c8ff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-surface": "#121c28",
+                        "tertiary": "#735c00",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#40484d",
+                        "surface-variant": "#d9e3f4",
+                        "primary": "#001e40",
+                        "on-error": "#ffffff",
+                        "primary-container": "#003366",
+                        "primary-fixed": "#d5e3ff",
+                        "inverse-surface": "#27313e",
+                        "surface-container-low": "#eef4ff",
+                        "background": "#f8f9ff",
+                        "tertiary-fixed": "#ffe088",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-secondary-container": "#5d656b",
+                        "outline-variant": "#c3c6d1",
+                        "on-primary-fixed": "#001b3c",
+                        "on-background": "#121c28",
+                        "surface-container": "#e5eeff",
+                        "on-secondary-fixed": "#151d22",
+                        "tertiary-container": "#cca830",
+                        "outline": "#737780",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface-variant": "#43474f",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-container-highest": "#d9e3f4",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "surface-tint": "#3a5f94",
+                        "secondary-fixed-dim": "#bfc8ce"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "md": "16px",
+                        "xs": "4px",
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "xl": "32px",
+                        "container-max": "1280px",
+                        "base": "4px",
+                        "lg": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["\"Source Serif 4\""],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "headline-lg-mobile": ["\"Source Serif 4\""],
+                        "label-xs": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-xs": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .hover-lift:hover {
+            box-shadow: 0px 4px 12px rgba(0, 51, 102, 0.08);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<div class="assignment-nav" style="position:sticky;top:0;z-index:9999;background:#0f172a;color:white;padding:12px 18px;font-family:Inter,Arial,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.18);">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+<strong style="font-size:15px;">INFO 465 Course Registration UI</strong>
+<nav style="display:flex;gap:10px;flex-wrap:wrap;font-size:14px;">
+<a href="index.html" style="color:white;text-decoration:none;">Home</a>
+<a href="course-search.html" style="color:white;text-decoration:none;">Course Search</a>
+<a href="student-registration.html" style="color:white;text-decoration:none;">Student Registration</a>
+<a href="instructor-schedule.html" style="color:white;text-decoration:none;">Instructor Schedule</a>
+<a href="session-enrollment.html" style="color:white;text-decoration:none;">Session Enrollment</a>
+<a href="student-login.html" style="color:white;text-decoration:none;">Student Login</a>
+<a href="instructor-login.html" style="color:white;text-decoration:none;">Instructor Login</a>
+</nav>
+</div>
+</div>
+
+<!-- Top Navigation Bar (Full Width) -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant dark:border-outline flex justify-between items-center w-full px-gutter h-16 sticky top-0 z-30">
+<div class="flex items-center gap-lg">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary md:hidden">
+                AP
+            </div>
+<div class="hidden md:block font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">
+                Academic Portal
+            </div>
+<nav class="hidden md:flex gap-md ml-lg">
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md cursor-pointer h-full flex items-center pt-1" href="course-search.html">
+                    Catalog
+                </a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-body-md text-body-md cursor-pointer pt-1" href="student-registration.html">My Courses</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-body-md text-body-md cursor-pointer pt-1" href="index.html">
+                    Settings
+                </a>
+</nav>
+</div>
+<div class="flex items-center gap-sm">
+<div class="hidden md:block relative mr-md">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-64 bg-surface-container-highest border-none rounded-lg pl-[40px] pr-sm py-xs font-body-md text-body-md text-on-surface focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface-container-lowest transition-all" placeholder="Search catalog..." type="text"/>
+</div>
+<button class="md:hidden text-on-surface-variant p-xs">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- Left Sidebar -->
+<nav class="hidden md:flex bg-surface-container-low dark:bg-surface-container w-64 border-r border-outline-variant dark:border-outline flex-col gap-sm p-md h-[calc(100vh-64px)] overflow-y-auto shrink-0 z-20">
+<div class="mb-xl flex flex-col items-center text-center">
+<div class="w-20 h-20 rounded-full bg-surface-container-high border-2 border-primary-container overflow-hidden mb-md flex items-center justify-center">
+<span class="material-symbols-outlined text-headline-lg text-primary" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Marta Gliber</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-xs">Fall 2024 Semester</p>
+</div>
+<ul class="flex flex-col gap-xs flex-grow">
+<li>
+<a class="flex items-center gap-md p-sm bg-primary-fixed text-on-primary-fixed rounded-lg transition-all duration-200 ease-in-out cursor-pointer font-bold" href="index.html">
+<span class="material-symbols-outlined">library_books</span>
+<span class="font-label-sm text-label-sm">Courses</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md p-sm text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out cursor-pointer" href="index.html">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="font-label-sm text-label-sm">Calendar</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-md p-sm text-on-surface-variant hover:bg-surface-variant rounded-lg transition-all duration-200 ease-in-out cursor-pointer" href="index.html">
+<span class="material-symbols-outlined">inbox</span>
+<span class="font-label-sm text-label-sm">Inbox</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 p-gutter overflow-y-auto bg-surface">
+<div class="max-w-container-max mx-auto">
+<!-- Page Header -->
+<div class="mb-xl">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary">Course Catalog</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-xs">Search and register for classes for the upcoming semester.</p>
+</div>
+<!-- Course Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col hover-lift transition-all duration-300 shadow-sm">
+<div class="flex justify-between items-start mb-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Social Sciences</span>
+<span class="bg-primary-container text-on-primary-container font-label-xs text-label-xs px-sm py-[2px] rounded-full">PSY 101</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs">Intro to Psychology</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-lg flex-grow">
+                            An overview of the fundamental principles of psychology, covering biological bases of behavior, cognition, and abnormal psychology.
+                        </p>
+<div class="flex justify-between items-end mt-auto border-t border-outline-variant pt-md">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Credits</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">3.0</span>
+</div>
+<button class="border border-primary text-primary hover:bg-surface-container-low font-label-sm text-label-sm px-md py-xs rounded-lg transition-colors flex items-center gap-xs">
+                                More Details
+                            </button>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col hover-lift transition-all duration-300 shadow-sm">
+<div class="flex justify-between items-start mb-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Computer Science</span>
+<span class="bg-primary-container text-on-primary-container font-label-xs text-label-xs px-sm py-[2px] rounded-full">CS 301</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs">Data Structures &amp; Algorithms</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-lg flex-grow">
+                            An in-depth study of fundamental data structures and algorithmic paradigms. Topics include trees, graphs, dynamic programming, and complexity analysis.
+                        </p>
+<div class="flex justify-between items-end mt-auto border-t border-outline-variant pt-md">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Credits</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.0</span>
+</div>
+<button class="border border-primary text-primary hover:bg-surface-container-low font-label-sm text-label-sm px-md py-xs rounded-lg transition-colors flex items-center gap-xs">
+                                More Details
+                            </button>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col hover-lift transition-all duration-300 shadow-sm">
+<div class="flex justify-between items-start mb-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Mathematics</span>
+<span class="bg-primary-container text-on-primary-container font-label-xs text-label-xs px-sm py-[2px] rounded-full">MATH 241</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs">Calculus III</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-lg flex-grow">
+                            Multivariable calculus including partial derivatives, multiple integrals, line integrals, and vector analysis.
+                        </p>
+<div class="flex justify-between items-end mt-auto border-t border-outline-variant pt-md">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Credits</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">3.0</span>
+</div>
+<button class="border border-primary text-primary hover:bg-surface-container-low font-label-sm text-label-sm px-md py-xs rounded-lg transition-colors flex items-center gap-xs">
+                                More Details
+                            </button>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col hover-lift transition-all duration-300 shadow-sm">
+<div class="flex justify-between items-start mb-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Literature</span>
+<span class="bg-primary-container text-on-primary-container font-label-xs text-label-xs px-sm py-[2px] rounded-full">LIT 205</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-xs">Modern World Literature</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-lg flex-grow">
+                            Exploration of significant literary works from around the globe in the 20th and 21st centuries.
+                        </p>
+<div class="flex justify-between items-end mt-auto border-t border-outline-variant pt-md">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Credits</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">3.0</span>
+</div>
+<button class="border border-primary text-primary hover:bg-surface-container-low font-label-sm text-label-sm px-md py-xs rounded-lg transition-colors flex items-center gap-xs">
+                                More Details
+                            </button>
+</div>
+</article>
+</div>
+</div>
+</main>
+</div>
+
+<section style="margin:32px auto;max-width:1100px;padding:24px;border:1px solid #d8dbe3;border-radius:18px;background:#ffffff;font-family:Inter,Arial,sans-serif;">
+<h2 style="font-size:24px;font-weight:700;color:#1e3a8a;margin-bottom:8px;">Functional Course Search Demo</h2>
+<p style="color:#475569;margin-bottom:18px;">Search by department, instructor, or course number. Details include credit hours, prerequisites, modality, and maximum enrollment.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px;">
+<input id="course-filter" placeholder="Try CS, Dr. Morgan, or 301" style="flex:1;min-width:240px;padding:12px;border:1px solid #cbd5e1;border-radius:10px;"/>
+<button onclick="filterCourses()" style="background:#1d4ed8;color:white;border:0;border-radius:10px;padding:12px 18px;cursor:pointer;">Search</button>
+<button onclick="resetCourses()" style="background:#e2e8f0;color:#0f172a;border:0;border-radius:10px;padding:12px 18px;cursor:pointer;">Reset</button>
+</div>
+<div id="course-results" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;"></div>
+</section>
+<script>
+  const courseData = [
+    {number:"CS 301", title:"Data Structures", department:"Computer Science", instructor:"Dr. Morgan", credits:4, prerequisites:"CS 201", modality:"In Person", max:"30"},
+    {number:"MATH 240", title:"Linear Algebra", department:"Mathematics", instructor:"Dr. Chen", credits:4, prerequisites:"MATH 200", modality:"Hybrid", max:"35"},
+    {number:"PSYC 101", title:"Intro to Psychology", department:"Psychology", instructor:"Prof. Rivera", credits:3, prerequisites:"None", modality:"Online", max:"60"},
+    {number:"ENG 102", title:"Modern Literature", department:"English", instructor:"Dr. Patel", credits:3, prerequisites:"ENG 101", modality:"In Person", max:"28"}
+  ];
+
+  function renderCourses(list) {
+    const results = document.getElementById("course-results");
+    results.innerHTML = "";
+    list.forEach(course => {
+      const card = document.createElement("article");
+      card.style.cssText = "border:1px solid #cbd5e1;border-radius:14px;padding:16px;background:#f8fafc;";
+      card.innerHTML = `
+        <h3 style="font-weight:700;color:#0f172a;">${course.number}: ${course.title}</h3>
+        <p><strong>Department:</strong> ${course.department}</p>
+        <p><strong>Instructor:</strong> ${course.instructor}</p>
+        <p><strong>Credit Hours:</strong> ${course.credits}</p>
+        <p><strong>Prerequisites:</strong> ${course.prerequisites}</p>
+        <p><strong>Modality:</strong> ${course.modality}</p>
+        <p><strong>Maximum Enrollment:</strong> ${course.max}</p>`;
+      results.appendChild(card);
+    });
+  }
+
+  function filterCourses() {
+    const query = document.getElementById("course-filter").value.toLowerCase();
+    const filtered = courseData.filter(course =>
+      course.number.toLowerCase().includes(query) ||
+      course.department.toLowerCase().includes(query) ||
+      course.instructor.toLowerCase().includes(query)
+    );
+    renderCourses(filtered);
+  }
+
+  function resetCourses() {
+    document.getElementById("course-filter").value = "";
+    renderCourses(courseData);
+  }
+
+  renderCourses(courseData);
+</script>
+</body></html>

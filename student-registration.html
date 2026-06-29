@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Portal Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#d9e3f4",
+                        "on-secondary-container": "#5d656b",
+                        "primary": "#001e40",
+                        "on-primary-fixed": "#001b3c",
+                        "tertiary": "#735c00",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#43474f",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "surface-container-low": "#eef4ff",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-variant": "#d9e3f4",
+                        "secondary": "#575f65",
+                        "inverse-primary": "#a7c8ff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "secondary-container": "#dbe3ea",
+                        "outline": "#737780",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#bfc8ce",
+                        "inverse-surface": "#27313e",
+                        "tertiary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface": "#f8f9ff",
+                        "primary-container": "#003366",
+                        "tertiary-container": "#cca830",
+                        "outline-variant": "#c3c6d1",
+                        "secondary-fixed": "#dbe3ea",
+                        "surface-tint": "#3a5f94",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d1dbec",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#121c28",
+                        "on-secondary-fixed": "#151d22",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#dfe9fa",
+                        "on-surface": "#121c28",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-primary-container": "#799dd6",
+                        "background": "#f8f9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-secondary-fixed-variant": "#40484d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "lg": "24px",
+                        "base": "4px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-xs": ["Inter"],
+                        "headline-lg-mobile": ["\"Source Serif 4\""],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-xs": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #f8f9ff; color: #121c28; }
+        .course-card { transition: box-shadow 0.2s ease-in-out; }
+        .course-card:hover { box-shadow: 0px 4px 12px rgba(0, 51, 102, 0.08); }
+        .striped-row:nth-child(even) { background-color: #eef4ff; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<div class="assignment-nav" style="position:sticky;top:0;z-index:9999;background:#0f172a;color:white;padding:12px 18px;font-family:Inter,Arial,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.18);">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+<strong style="font-size:15px;">INFO 465 Course Registration UI</strong>
+<nav style="display:flex;gap:10px;flex-wrap:wrap;font-size:14px;">
+<a href="index.html" style="color:white;text-decoration:none;">Home</a>
+<a href="course-search.html" style="color:white;text-decoration:none;">Course Search</a>
+<a href="student-registration.html" style="color:white;text-decoration:none;">Student Registration</a>
+<a href="instructor-schedule.html" style="color:white;text-decoration:none;">Instructor Schedule</a>
+<a href="session-enrollment.html" style="color:white;text-decoration:none;">Session Enrollment</a>
+<a href="student-login.html" style="color:white;text-decoration:none;">Student Login</a>
+<a href="instructor-login.html" style="color:white;text-decoration:none;">Instructor Login</a>
+</nav>
+</div>
+</div>
+
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest border-b border-outline-variant w-full docked full-width top-0 z-50">
+<div class="flex justify-between items-center w-full px-gutter h-16 max-w-container-max mx-auto">
+<div class="flex items-center gap-md">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Academic Portal</h1>
+<nav class="hidden md:flex gap-md ml-lg">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors cursor-pointer active:opacity-80" href="course-search.html">Catalog</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md cursor-pointer active:opacity-80" href="student-registration.html">My Courses</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors cursor-pointer active:opacity-80" href="index.html">Settings</a></nav>
+</div>
+<div class="flex items-center gap-sm">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]" data-icon="search">search</span>
+<input class="pl-xl pr-sm py-[6px] border border-outline-variant rounded-full text-label-sm font-label-sm bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:border-transparent" placeholder="Search courses..." type="text"/>
+</div>
+</div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col gap-sm p-md border-r border-outline-variant bg-surface-container-low h-full w-64 flex-shrink-0">
+<div class="flex items-center gap-sm mb-md">
+<img alt="User Profile" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A professional headshot of a female academic advisor in a modern, brightly lit office environment. She is smiling warmly. The color palette features cool tones, matching a light-mode corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwWogqHhoAf4tzAX18Xo0AW4I7nxH8--PuYeoZYBrW58DRFo05ge8AII2dT674WfMiKlxj0VtaXEKgbBAFFDhkgnUTE7x2eYK6inPRv-9lVlTCLnJnwoCVWos4qR63E5ZTi9xFEOB2tplC47tWXgpkmgsb4PZlk7Acaro_6zTZvbeqrn_JIUrfRTzlVGKLJB8F-UnljoDRgtTdS_DYoMH3Om0BRs6PpTKJ8lMva4m-aq2ip58PHN3qfZ7wUBhLScJpOKFaOoBbcGE"/>
+<div>
+<div class="font-label-sm text-label-sm font-bold text-on-surface">Marta Gliber</div>
+<div class="font-label-xs text-label-xs text-on-surface-variant">Fall 2024 Semester</div>
+</div>
+</div>
+<nav class="flex flex-col gap-xs flex-1"><a class="flex items-center gap-sm p-sm bg-surface-container-high text-primary rounded-lg font-bold font-label-sm text-label-sm transition-all duration-200 ease-in-out" href="index.html"><span class="material-symbols-outlined text-[20px]">school</span>Courses</a><a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant rounded-lg font-label-sm text-label-sm transition-all duration-200 ease-in-out" href="index.html"><span class="material-symbols-outlined text-[20px]">calendar_today</span>Calendar</a><a class="flex items-center gap-sm p-sm text-on-surface-variant hover:bg-surface-variant rounded-lg font-label-sm text-label-sm transition-all duration-200 ease-in-out" href="index.html"><span class="material-symbols-outlined text-[20px]">mail</span>Inbox</a></nav>
+<button class="mt-auto w-full border border-primary text-primary font-label-sm text-label-sm px-md py-sm rounded-lg hover:bg-surface-container-lowest transition-colors flex items-center justify-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">fact_check</span> View Degree Audit
+            </button>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto p-gutter max-w-container-max mx-auto w-full">
+<div class="mb-lg">
+<h2 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-xs">Dashboard</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your current schedule and register for new courses.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-lg">
+<!-- Enrolled Sessions (Spans 2 columns on wide screens) -->
+<section class="xl:col-span-2 flex flex-col gap-md">
+<div class="flex items-center justify-between border-b border-outline-variant pb-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Enrolled Sessions</h3>
+<span class="bg-primary-container text-on-primary-container font-label-xs text-label-xs px-2 py-1 rounded-full">12 Credits</span>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm text-on-surface border-b border-outline-variant">
+<th class="p-md font-medium">Course</th>
+<th class="p-md font-medium hidden sm:table-cell">Time</th>
+<th class="p-md font-medium hidden md:table-cell">Location</th>
+<th class="p-md font-medium">Credits</th>
+<th class="p-md font-medium text-right">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="striped-row border-b border-outline-variant last:border-0 font-body-md text-body-md text-on-surface">
+<td class="p-md">
+<div class="font-bold text-primary">CS 301</div>
+<div class="font-label-xs text-label-xs text-on-surface-variant">Data Structures</div>
+</td>
+<td class="p-md hidden sm:table-cell text-on-surface-variant">MWF 10:00 AM</td>
+<td class="p-md hidden md:table-cell text-on-surface-variant">Turing Hall 101</td>
+<td class="p-md text-center sm:text-left">4</td>
+<td class="p-md text-right">
+<span class="inline-flex items-center gap-1 bg-[#d3f9d8] text-[#2b8a3e] font-label-xs text-label-xs px-2 py-1 rounded-full border border-[#b2f2bb]">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Registered
+                                        </span>
+</td>
+</tr>
+<tr class="striped-row border-b border-outline-variant last:border-0 font-body-md text-body-md text-on-surface">
+<td class="p-md">
+<div class="font-bold text-primary">MATH 240</div>
+<div class="font-label-xs text-label-xs text-on-surface-variant">Linear Algebra</div>
+</td>
+<td class="p-md hidden sm:table-cell text-on-surface-variant">TTh 1:00 PM</td>
+<td class="p-md hidden md:table-cell text-on-surface-variant">Euler Bldg 205</td>
+<td class="p-md text-center sm:text-left">4</td>
+<td class="p-md text-right">
+<span class="inline-flex items-center gap-1 bg-[#d3f9d8] text-[#2b8a3e] font-label-xs text-label-xs px-2 py-1 rounded-full border border-[#b2f2bb]">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Registered
+                                        </span>
+</td>
+</tr>
+<tr class="striped-row border-b border-outline-variant last:border-0 font-body-md text-body-md text-on-surface">
+<td class="p-md">
+<div class="font-bold text-primary">ENG 102</div>
+<div class="font-label-xs text-label-xs text-on-surface-variant">Modern Lit</div>
+</td>
+<td class="p-md hidden sm:table-cell text-on-surface-variant">MW 3:30 PM</td>
+<td class="p-md hidden md:table-cell text-on-surface-variant">Library Rm B</td>
+<td class="p-md text-center sm:text-left">4</td>
+<td class="p-md text-right">
+<span class="inline-flex items-center gap-1 bg-[#fff3bf] text-[#e67700] font-label-xs text-label-xs px-2 py-1 rounded-full border border-[#ffec99]">
+<span class="material-symbols-outlined text-[14px]">hourglass_top</span> Waitlist (Pos 2)
+                                        </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- New Registration / Search -->
+<section class="xl:col-span-1 flex flex-col gap-md">
+<div class="flex items-center justify-between border-b border-outline-variant pb-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface">Quick Add</h3>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md flex flex-col gap-md course-card">
+<div class="flex flex-col gap-xs relative">
+<label class="font-label-sm text-label-sm text-on-surface font-semibold" for="course-search">Search Catalog</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]" data-icon="search">search</span>
+<input class="w-full pl-xl pr-sm py-sm border border-outline-variant rounded-lg text-body-md font-body-md bg-surface focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 focus:border-transparent" id="course-search" placeholder="e.g. PHY 201" type="text"/>
+</div>
+</div>
+<!-- Search Results / Suggestions -->
+<div class="flex flex-col gap-sm">
+<!-- Available Course -->
+<div class="border border-outline-variant rounded-lg p-sm flex items-center justify-between hover:bg-surface-container-low transition-colors">
+<div>
+<div class="font-label-sm text-label-sm font-bold text-primary">PHY 201</div>
+<div class="font-label-xs text-label-xs text-on-surface-variant">Intro Physics</div>
+</div>
+<div class="flex items-center gap-sm">
+<span class="bg-[#d3f9d8] text-[#2b8a3e] font-label-xs text-label-xs px-2 py-0.5 rounded-full">Open</span>
+<button aria-label="Add Course" class="text-primary hover:bg-primary-container p-1 rounded-full transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]" data-icon="add_circle">add_circle</span>
+</button>
+</div>
+</div>
+<!-- Full Course -->
+<div class="border border-outline-variant rounded-lg p-sm flex items-center justify-between bg-surface-container-low opacity-70">
+<div>
+<div class="font-label-sm text-label-sm font-bold text-on-surface">ART 105</div>
+<div class="font-label-xs text-label-xs text-on-surface-variant">Design Basics</div>
+</div>
+<div class="flex items-center gap-sm">
+<span class="bg-[#f1f3f5] text-[#868e96] font-label-xs text-label-xs px-2 py-0.5 rounded-full border border-[#dee2e6]">Full</span>
+<button class="text-outline p-1 rounded-full cursor-not-allowed flex items-center justify-center" disabled="">
+<span class="material-symbols-outlined text-[20px]" data-icon="block">block</span>
+</button>
+</div>
+</div>
+<!-- Conflict Warning -->
+<div class="border border-error/30 bg-error-container/20 rounded-lg p-sm flex items-center justify-between">
+<div>
+<div class="font-label-sm text-label-sm font-bold text-primary">CS 301 (Lab)</div>
+<div class="font-label-xs text-label-xs text-error flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Time Conflict
+                                    </div>
+</div>
+<div class="flex items-center gap-sm">
+<button class="bg-primary text-on-primary font-label-xs text-label-xs px-3 py-1.5 rounded-lg hover:opacity-90 transition-opacity opacity-50 cursor-not-allowed" disabled="">Add</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+
+<section style="margin:32px auto;max-width:1100px;padding:24px;border:1px solid #d8dbe3;border-radius:18px;background:#ffffff;font-family:Inter,Arial,sans-serif;">
+<h2 style="font-size:24px;font-weight:700;color:#1e3a8a;margin-bottom:8px;">Registration Validation Demo</h2>
+<p style="color:#475569;margin-bottom:18px;">Use these buttons to demonstrate duplicate registration prevention and enrollment-limit validation.</p>
+<div id="validation-message" style="padding:12px 14px;border-radius:10px;background:#eef2ff;color:#1e3a8a;margin-bottom:18px;">Logged in as Student: Jordan Lee. Current enrolled sessions: CS 301 and MATH 240.</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+<article style="border:1px solid #cbd5e1;border-radius:14px;padding:16px;">
+<h3 style="font-weight:700;color:#0f172a;">PHY 201 - Intro Physics</h3>
+<p>Enrollment: <span id="phy-count">24</span>/30</p>
+<button onclick="registerCourse('PHY 201', 30, 'phy-count')" style="margin-top:10px;background:#1d4ed8;color:white;border:0;border-radius:10px;padding:10px 14px;cursor:pointer;">Register</button>
+</article>
+<article style="border:1px solid #cbd5e1;border-radius:14px;padding:16px;">
+<h3 style="font-weight:700;color:#0f172a;">ART 105 - Design Basics</h3>
+<p>Enrollment: <span id="art-count">25</span>/25</p>
+<button onclick="registerCourse('ART 105', 25, 'art-count')" style="margin-top:10px;background:#64748b;color:white;border:0;border-radius:10px;padding:10px 14px;cursor:pointer;">Try Registering</button>
+</article>
+<article style="border:1px solid #cbd5e1;border-radius:14px;padding:16px;">
+<h3 style="font-weight:700;color:#0f172a;">CS 301 - Data Structures</h3>
+<p>Enrollment: <span id="cs-count">28</span>/30</p>
+<button onclick="registerCourse('CS 301', 30, 'cs-count')" style="margin-top:10px;background:#1d4ed8;color:white;border:0;border-radius:10px;padding:10px 14px;cursor:pointer;">Try Duplicate</button>
+</article>
+</div>
+</section>
+<script>
+  const enrolledCourses = new Set(["CS 301", "MATH 240"]);
+
+  function registerCourse(courseCode, maxEnrollment, countElementId) {
+    const message = document.getElementById("validation-message");
+    const countElement = document.getElementById(countElementId);
+    const currentEnrollment = Number(countElement.textContent);
+
+    if (enrolledCourses.has(courseCode)) {
+      message.style.background = "#fee2e2";
+      message.style.color = "#991b1b";
+      message.textContent = "Registration blocked: duplicate registration is not allowed for " + courseCode + ".";
+      return;
+    }
+
+    if (currentEnrollment >= maxEnrollment) {
+      message.style.background = "#fef3c7";
+      message.style.color = "#92400e";
+      message.textContent = "Registration blocked: " + courseCode + " is full and has reached its enrollment limit.";
+      return;
+    }
+
+    enrolledCourses.add(courseCode);
+    countElement.textContent = currentEnrollment + 1;
+    message.style.background = "#dcfce7";
+    message.style.color = "#166534";
+    message.textContent = "Registration successful: " + courseCode + " has been added to the student schedule.";
+  }
+</script>
+</body></html>

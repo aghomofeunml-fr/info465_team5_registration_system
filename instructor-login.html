@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Portal - Professor Login</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#799dd6",
+                        "surface-bright": "#f8f9ff",
+                        "secondary": "#575f65",
+                        "surface": "#f8f9ff",
+                        "surface-dim": "#d1dbec",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-secondary": "#ffffff",
+                        "inverse-primary": "#a7c8ff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "on-surface": "#121c28",
+                        "tertiary": "#735c00",
+                        "secondary-fixed": "#dbe3ea",
+                        "secondary-container": "#dbe3ea",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#dfe9fa",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface-variant": "#d9e3f4",
+                        "primary": "#001e40",
+                        "on-error": "#ffffff",
+                        "primary-container": "#003366",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#40484d",
+                        "surface-container-low": "#eef4ff",
+                        "background": "#f8f9ff",
+                        "tertiary-fixed": "#ffe088",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-secondary-container": "#5d656b",
+                        "outline-variant": "#c3c6d1",
+                        "on-primary-fixed": "#001b3c",
+                        "primary-fixed": "#d5e3ff",
+                        "inverse-surface": "#27313e",
+                        "tertiary-container": "#cca830",
+                        "outline": "#737780",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-surface-variant": "#43474f",
+                        "on-background": "#121c28",
+                        "surface-container": "#e5eeff",
+                        "on-secondary-fixed": "#151d22",
+                        "surface-container-highest": "#d9e3f4",
+                        "on-tertiary-fixed": "#241a00",
+                        "secondary-fixed-dim": "#bfc8ce",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "surface-tint": "#3a5f94"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.125rem",
+                        lg: "0.25rem",
+                        xl: "0.5rem",
+                        full: "0.75rem"
+                    },
+                    spacing: {
+                        base: "4px",
+                        lg: "24px",
+                        xl: "32px",
+                        "container-max": "1280px",
+                        xs: "4px",
+                        sm: "8px",
+                        gutter: "24px",
+                        md: "16px"
+                    },
+                    fontFamily: {
+                        "headline-md": ["\"Source Serif 4\""],
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "label-xs": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["\"Source Serif 4\""]
+                    },
+                    fontSize: {
+                        "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        "label-sm": ["14px", { lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                        "headline-lg": ["36px", { lineHeight: "44px", fontWeight: "700" }],
+                        "label-xs": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }],
+                        "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                        "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "700" }]
+                    }
+                }
+            }
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Subtle texture for the background */
+        .bg-texture {
+            background-image: radial-gradient(theme('colors.outline-variant') 1px, transparent 1px);
+            background-size: 24px 24px;
+            background-position: -12px -12px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container">
+<div class="assignment-nav" style="position:sticky;top:0;z-index:9999;background:#0f172a;color:white;padding:12px 18px;font-family:Inter,Arial,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.18);">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+<strong style="font-size:15px;">INFO 465 Course Registration UI</strong>
+<nav style="display:flex;gap:10px;flex-wrap:wrap;font-size:14px;">
+<a href="index.html" style="color:white;text-decoration:none;">Home</a>
+<a href="course-search.html" style="color:white;text-decoration:none;">Course Search</a>
+<a href="student-registration.html" style="color:white;text-decoration:none;">Student Registration</a>
+<a href="instructor-schedule.html" style="color:white;text-decoration:none;">Instructor Schedule</a>
+<a href="session-enrollment.html" style="color:white;text-decoration:none;">Session Enrollment</a>
+<a href="student-login.html" style="color:white;text-decoration:none;">Student Login</a>
+<a href="instructor-login.html" style="color:white;text-decoration:none;">Instructor Login</a>
+</nav>
+</div>
+</div>
+
+<!-- Background Pattern -->
+<div class="fixed inset-0 bg-texture pointer-events-none z-0"></div>
+<!-- Main Container -->
+<main class="flex-grow flex items-center justify-center p-gutter relative z-10 w-full max-w-container-max mx-auto">
+<!-- Login Card -->
+<div class="w-full max-w-[480px] bg-surface-container-lowest rounded-xl shadow-lg border border-outline-variant overflow-hidden flex flex-col transition-all duration-300 hover:shadow-xl">
+<!-- Header Section -->
+<div class="px-xl pt-xl pb-md text-center">
+<div class="flex justify-center mb-md">
+<div class="w-16 h-16 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary md:block hidden">Professor Login</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary block md:hidden">Professor Login</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Access the Academic Portal to manage courses and grades.</p>
+</div>
+<!-- Role Switcher -->
+<div class="px-xl pb-lg">
+<div class="flex bg-surface-container-low rounded-lg p-xs border border-outline-variant">
+<button class="flex-1 py-sm px-md rounded font-label-sm text-label-sm text-on-surface-variant hover:bg-surface-variant hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" type="button">
+                        Student
+                    </button>
+<button class="flex-1 py-sm px-md rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm font-semibold shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2" type="button">
+                        Professor
+                    </button>
+</div>
+</div>
+<!-- Form Section -->
+<div class="px-xl pb-xl flex-grow flex flex-col">
+<form action="#" class="flex flex-col gap-lg flex-grow" method="POST">
+<!-- Email Field -->
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-xs" for="email">Institutional Email</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-md flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">mail</span>
+</div>
+<input class="block w-full pl-[48px] pr-md py-md bg-surface border border-outline-variant rounded focus:ring-2 focus:ring-primary focus:border-primary font-body-md text-body-md text-on-surface placeholder:text-outline transition-shadow" id="email" name="email" placeholder="professor@university.edu" required="" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div>
+<div class="flex justify-between items-center mb-xs">
+<label class="block font-label-sm text-label-sm text-on-surface" for="password">Password</label>
+<a class="font-label-xs text-label-xs text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded px-1" href="index.html">Forgot password?</a>
+</div>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-md flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">lock</span>
+</div>
+<input class="block w-full pl-[48px] pr-[48px] py-md bg-surface border border-outline-variant rounded focus:ring-2 focus:ring-primary focus:border-primary font-body-md text-body-md text-on-surface placeholder:text-outline transition-shadow" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-md flex items-center text-outline hover:text-on-surface transition-colors focus:outline-none focus:text-primary" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center">
+<input class="h-4 w-4 text-primary bg-surface border-outline-variant rounded focus:ring-primary focus:ring-2 focus:ring-offset-1 transition-colors cursor-pointer" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-sm block font-body-md text-body-md text-on-surface-variant cursor-pointer" for="remember-me">
+                            Remember me on this device
+                        </label>
+</div>
+<!-- Sign In Button -->
+<button class="w-full flex justify-center items-center py-md px-lg border border-transparent rounded bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors shadow-sm active:opacity-80" type="submit">
+                        Sign In
+                        <span class="material-symbols-outlined ml-xs text-[18px]">login</span>
+</button>
+<div class="relative my-sm">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="px-sm bg-surface-container-lowest font-label-xs text-label-xs text-outline tracking-wider uppercase">Or continue with</span>
+</div>
+</div>
+<!-- Google Sign In -->
+<button class="w-full flex justify-center items-center py-md px-lg border border-outline-variant rounded bg-surface text-on-surface font-label-sm text-label-sm hover:bg-surface-variant focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-colors" type="button">
+<svg class="w-5 h-5 mr-sm" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"></path>
+</svg>
+                        Sign in with Google
+                    </button>
+</form>
+</div>
+<!-- Footer -->
+<div class="bg-surface-container-low px-xl py-md border-t border-outline-variant flex justify-center items-center gap-md text-on-surface-variant">
+<a class="font-label-xs text-label-xs hover:text-primary transition-colors focus:outline-none focus:underline" href="index.html">Help &amp; Support</a>
+<span class="text-outline-variant">•</span>
+<a class="font-label-xs text-label-xs hover:text-primary transition-colors focus:outline-none focus:underline" href="index.html">Privacy Policy</a>
+</div>
+</div>
+</main>
+</body></html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#d9e3f4",
+                        "on-secondary-container": "#5d656b",
+                        "primary": "#001e40",
+                        "on-primary-fixed": "#001b3c",
+                        "tertiary": "#735c00",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#43474f",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-fixed-variant": "#1f477b",
+                        "surface-container-low": "#eef4ff",
+                        "primary-fixed": "#d5e3ff",
+                        "surface-variant": "#d9e3f4",
+                        "secondary": "#575f65",
+                        "inverse-primary": "#a7c8ff",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "secondary-container": "#dbe3ea",
+                        "outline": "#737780",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#bfc8ce",
+                        "inverse-surface": "#27313e",
+                        "tertiary-fixed": "#ffe088",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface": "#f8f9ff",
+                        "primary-container": "#003366",
+                        "tertiary-container": "#cca830",
+                        "outline-variant": "#c3c6d1",
+                        "secondary-fixed": "#dbe3ea",
+                        "surface-tint": "#3a5f94",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#d1dbec",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "primary-fixed-dim": "#a7c8ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#121c28",
+                        "on-secondary-fixed": "#151d22",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#dfe9fa",
+                        "on-surface": "#121c28",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-primary-container": "#799dd6",
+                        "background": "#f8f9ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-secondary-fixed-variant": "#40484d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "gutter": "24px",
+                        "lg": "24px",
+                        "base": "4px",
+                        "xs": "4px",
+                        "xl": "32px",
+                        "md": "16px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-xs": ["Inter"],
+                        "headline-lg-mobile": ["\"Source Serif 4\""],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["\"Source Serif 4\""],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["\"Source Serif 4\""],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-xs": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "700" }],
+                        "label-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<div class="assignment-nav" style="position:sticky;top:0;z-index:9999;background:#0f172a;color:white;padding:12px 18px;font-family:Inter,Arial,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.18);">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+<strong style="font-size:15px;">INFO 465 Course Registration UI</strong>
+<nav style="display:flex;gap:10px;flex-wrap:wrap;font-size:14px;">
+<a href="index.html" style="color:white;text-decoration:none;">Home</a>
+<a href="course-search.html" style="color:white;text-decoration:none;">Course Search</a>
+<a href="student-registration.html" style="color:white;text-decoration:none;">Student Registration</a>
+<a href="instructor-schedule.html" style="color:white;text-decoration:none;">Instructor Schedule</a>
+<a href="session-enrollment.html" style="color:white;text-decoration:none;">Session Enrollment</a>
+<a href="student-login.html" style="color:white;text-decoration:none;">Student Login</a>
+<a href="instructor-login.html" style="color:white;text-decoration:none;">Instructor Login</a>
+</nav>
+</div>
+</div>
+
+<!-- Top Navigation Bar -->
+<header class="bg-surface-container-lowest text-primary font-body-md docked full-width top-0 border-b border-outline-variant flat no shadows">
+<div class="flex justify-between items-center w-full px-gutter h-16 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+                Academic Portal
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:opacity-80" href="course-search.html">Catalog</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:opacity-80" href="student-registration.html">My Schedule</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer active:opacity-80" href="index.html">Settings</a></nav>
+<!-- Actions -->
+<div class="flex items-center gap-md">
+<button class="hidden md:block font-label-sm text-label-sm text-primary hover:bg-surface-container-highest px-4 py-2 rounded transition-colors border border-transparent">Login</button>
+<button class="font-label-sm text-label-sm bg-primary text-on-primary hover:bg-on-primary-fixed px-4 py-2 rounded transition-colors shadow-sm">Sign Up</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col w-full px-gutter max-w-container-max mx-auto py-xl gap-xl">
+<!-- Hero Section -->
+<section class="flex flex-col items-center text-center max-w-3xl mx-auto py-xl gap-md">
+<h1 class="font-headline-lg text-headline-lg text-primary md:hidden">Navigate Your Academic Journey</h1>
+<h1 class="hidden md:block font-headline-lg text-headline-lg text-primary">Navigate Your Academic Journey</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A streamlined, modern portal designed to simplify course registration, schedule management, and academic planning for students and faculty.
+            </p>
+<div class="mt-md flex gap-md">
+<button class="font-label-sm text-label-sm bg-primary text-on-primary hover:bg-on-primary-fixed px-6 py-3 rounded-lg transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined">search</span>
+                    Browse Course Catalog
+                </button>
+</div>
+</section>
+<!-- Bento Grid / Core Functionalities -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-lg auto-rows-[minmax(250px,auto)]">
+<!-- Course Search Card (Large) -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl border border-outline-variant p-lg flex flex-col justify-between group hover:shadow-[0px_4px_12px_rgba(0,30,64,0.08)] transition-shadow duration-300 relative overflow-hidden">
+<div class="absolute -right-12 -top-12 opacity-5 pointer-events-none transition-transform duration-700 group-hover:scale-110">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<div class="z-10 flex flex-col gap-sm">
+<div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mb-sm text-primary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary">Course Search &amp; Catalog</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                        Explore thousands of courses across disciplines. Filter by department, credit hours, instructor, and schedule compatibility to find exactly what you need for the upcoming semester.
+                    </p>
+</div>
+<div class="z-10 mt-xl flex items-center justify-between">
+<div class="flex gap-2">
+<span class="font-label-xs text-label-xs bg-surface text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant">Undergraduate</span>
+<span class="font-label-xs text-label-xs bg-surface text-on-surface-variant px-3 py-1 rounded-full border border-outline-variant">Graduate</span>
+</div>
+<a class="text-primary font-label-sm text-label-sm flex items-center gap-1 group-hover:gap-2 transition-all" href="course-search.html">
+                        Search Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Student Registration Card -->
+<div class="md:col-span-4 bg-surface-container-high rounded-xl border border-outline-variant p-lg flex flex-col justify-between group hover:shadow-[0px_4px_12px_rgba(0,30,64,0.08)] transition-shadow duration-300">
+<div class="flex flex-col gap-sm">
+<div class="bg-primary-container text-on-primary-container w-10 h-10 rounded-lg flex items-center justify-center mb-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">how_to_reg</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface" style="font-size: 20px; line-height: 28px;">Student Registration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Build your schedule with a conflict-free planner, join waitlists, and finalize your enrollment seamlessly.
+                    </p>
+</div>
+<button class="mt-md font-label-sm text-label-sm text-primary border border-primary hover:bg-primary hover:text-on-primary w-full py-2 rounded transition-colors text-center">
+                    Go to Registration
+                </button>
+</div>
+<!-- Instructor Schedules Card -->
+<div class="md:col-span-4 bg-surface-container-low rounded-xl border border-outline-variant p-lg flex flex-col justify-between group hover:shadow-[0px_4px_12px_rgba(0,30,64,0.08)] transition-shadow duration-300">
+<div class="flex flex-col gap-sm">
+<div class="text-tertiary w-10 h-10 rounded-lg flex items-center justify-center mb-sm bg-tertiary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface" style="font-size: 20px; line-height: 28px;">Instructor Schedules</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+                        Manage your teaching assignments, view class rosters, and organize office hours in one unified dashboard.
+                    </p>
+</div>
+<a class="mt-md text-primary font-label-sm text-label-sm flex items-center gap-1 hover:underline" href="instructor-login.html">
+                    Faculty Login <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+</div>
+<!-- Degree Audit Visual (Wide) -->
+<div class="md:col-span-8 bg-surface rounded-xl border border-outline-variant p-0 flex flex-col md:flex-row overflow-hidden group hover:shadow-[0px_4px_12px_rgba(0,30,64,0.08)] transition-shadow duration-300">
+<div class="p-lg flex-1 flex flex-col justify-center">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Degree Audit &amp; Planning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                        Track your progress towards graduation. See completed core requirements, remaining electives, and GPA projections in real-time.
+                    </p>
+<a class="text-primary font-label-sm text-label-sm inline-flex items-center gap-1 w-max" href="index.html">
+                        View Sample Audit
+                    </a>
+</div>
+<!-- Abstract Academic Chart representation using CSS -->
+<div class="bg-surface-container-highest w-full md:w-2/5 p-md flex flex-col justify-center gap-3 border-l border-outline-variant/30">
+<div class="w-full flex items-center gap-3">
+<div class="w-8 text-right font-label-xs text-label-xs text-on-surface-variant">Core</div>
+<div class="flex-1 h-3 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%] rounded-full"></div>
+</div>
+<div class="w-8 font-label-xs text-label-xs text-primary text-right">85%</div>
+</div>
+<div class="w-full flex items-center gap-3">
+<div class="w-8 text-right font-label-xs text-label-xs text-on-surface-variant">Major</div>
+<div class="flex-1 h-3 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-container w-[60%] rounded-full"></div>
+</div>
+<div class="w-8 font-label-xs text-label-xs text-tertiary-container text-right">60%</div>
+</div>
+<div class="w-full flex items-center gap-3">
+<div class="w-8 text-right font-label-xs text-label-xs text-on-surface-variant">Electives</div>
+<div class="flex-1 h-3 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-surface-tint w-[30%] rounded-full"></div>
+</div>
+<div class="w-8 font-label-xs text-label-xs text-surface-tint text-right">30%</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Links Strip -->
+<section class="border-t border-outline-variant pt-lg mt-md mb-xl flex flex-wrap gap-md justify-center text-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary px-4 py-2 rounded hover:bg-surface-container transition-colors" href="index.html">Academic Calendar</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary px-4 py-2 rounded hover:bg-surface-container transition-colors" href="index.html">Financial Aid</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary px-4 py-2 rounded hover:bg-surface-container transition-colors" href="index.html">Advising Directory</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary px-4 py-2 rounded hover:bg-surface-container transition-colors" href="student-login.html">Student Handbook</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary px-4 py-2 rounded hover:bg-surface-container transition-colors" href="index.html">Help &amp; Support</a>
+</section>
+</main>
+</body></html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Course Roster - Academic Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#d9e3f4",
+                      "on-secondary-container": "#5d656b",
+                      "primary": "#001e40",
+                      "on-primary-fixed": "#001b3c",
+                      "tertiary": "#735c00",
+                      "error": "#ba1a1a",
+                      "on-surface-variant": "#43474f",
+                      "surface-bright": "#f8f9ff",
+                      "on-primary-fixed-variant": "#1f477b",
+                      "surface-container-low": "#eef4ff",
+                      "primary-fixed": "#d5e3ff",
+                      "surface-variant": "#d9e3f4",
+                      "secondary": "#575f65",
+                      "inverse-primary": "#a7c8ff",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "secondary-container": "#dbe3ea",
+                      "outline": "#737780",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#bfc8ce",
+                      "inverse-surface": "#27313e",
+                      "tertiary-fixed": "#ffe088",
+                      "on-tertiary-fixed": "#241a00",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "surface": "#f8f9ff",
+                      "primary-container": "#003366",
+                      "tertiary-container": "#cca830",
+                      "outline-variant": "#c3c6d1",
+                      "secondary-fixed": "#dbe3ea",
+                      "surface-tint": "#3a5f94",
+                      "on-error-container": "#93000a",
+                      "surface-dim": "#d1dbec",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "primary-fixed-dim": "#a7c8ff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#121c28",
+                      "on-secondary-fixed": "#151d22",
+                      "error-container": "#ffdad6",
+                      "surface-container-high": "#dfe9fa",
+                      "on-surface": "#121c28",
+                      "on-tertiary-container": "#4f3e00",
+                      "on-primary-container": "#799dd6",
+                      "background": "#f8f9ff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-secondary-fixed-variant": "#40484d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "sm": "8px",
+                      "gutter": "24px",
+                      "lg": "24px",
+                      "base": "4px",
+                      "xs": "4px",
+                      "xl": "32px",
+                      "md": "16px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "label-xs": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "\"Source Serif 4\""
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "\"Source Serif 4\""
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "\"Source Serif 4\""
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-xs": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .striped-row:nth-child(even) {
+            background-color: theme('colors.surface-container-low');
+        }
+        .striped-row:nth-child(odd) {
+            background-color: theme('colors.surface');
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+<div class="assignment-nav" style="position:sticky;top:0;z-index:9999;background:#0f172a;color:white;padding:12px 18px;font-family:Inter,Arial,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.18);">
+<div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+<strong style="font-size:15px;">INFO 465 Course Registration UI</strong>
+<nav style="display:flex;gap:10px;flex-wrap:wrap;font-size:14px;">
+<a href="index.html" style="color:white;text-decoration:none;">Home</a>
+<a href="course-search.html" style="color:white;text-decoration:none;">Course Search</a>
+<a href="student-registration.html" style="color:white;text-decoration:none;">Student Registration</a>
+<a href="instructor-schedule.html" style="color:white;text-decoration:none;">Instructor Schedule</a>
+<a href="session-enrollment.html" style="color:white;text-decoration:none;">Session Enrollment</a>
+<a href="student-login.html" style="color:white;text-decoration:none;">Student Login</a>
+<a href="instructor-login.html" style="color:white;text-decoration:none;">Instructor Login</a>
+</nav>
+</div>
+</div>
+
+<!-- Top Navigation Bar - Suppressed because this is a sub-page/details view, but keeping the container for layout structure -->
+<header class="bg-surface-container-lowest dark:bg-inverse-surface border-b border-outline-variant w-full sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-gutter h-16 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<!-- Back Button indicating sub-page context -->
+<button aria-label="Go back" class="flex items-center justify-center p-2 rounded-full hover:bg-surface-variant transition-colors text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+</button>
+<div class="font-headline-md text-headline-md font-bold text-primary">Academic Portal</div>
+</div>
+<!-- Auth Badge -->
+<div class="flex items-center gap-2 px-3 py-1.5 bg-error-container text-on-error-container rounded-full font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span>Authorized Access Only</span>
+</div>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max mx-auto px-gutter py-xl">
+<!-- Course Header Context -->
+<div class="mb-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-md mb-md">
+<div>
+<div class="inline-flex items-center gap-2 px-2 py-1 bg-surface-container-highest text-on-surface-variant rounded font-label-xs text-label-xs mb-2">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span> Fall 2024
+                    </div>
+<h1 class="font-headline-lg text-headline-lg md:text-headline-lg text-primary mb-1">CS 402: Advanced Algorithms</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Section 01 • Prof. Alan Turing • MWF 10:00 AM - 10:50 AM</p>
+</div>
+<div class="flex gap-sm">
+<button class="px-4 py-2 border-2 border-primary text-primary rounded font-label-sm text-label-sm hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span> Export CSV
+                    </button>
+<button class="px-4 py-2 bg-primary text-on-primary rounded font-label-sm text-label-sm hover:bg-on-primary-fixed transition-colors flex items-center gap-2 shadow-[0_4px_12px_rgba(0,30,64,0.15)]">
+<span class="material-symbols-outlined text-[18px]">mail</span> Email Class
+                    </button>
+</div>
+</div>
+</div>
+<!-- Roster Table Container (Level 1 Elevation) -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden shadow-sm">
+<!-- Table Controls -->
+<div class="p-md border-b border-outline-variant bg-surface flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                    Showing <span class="font-bold text-on-surface">32</span> enrolled students
+                </div>
+<div class="relative w-full sm:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-surface-container-lowest font-body-md text-body-md text-on-surface placeholder:text-outline transition-shadow" placeholder="Search students..." type="text"/>
+</div>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high border-b border-outline-variant font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">
+<th class="p-md font-medium w-12 text-center">#</th>
+<th class="p-md font-medium">Student Name</th>
+<th class="p-md font-medium">Student ID</th>
+<th class="p-md font-medium">Major</th>
+<th class="p-md font-medium">Class Year</th>
+<th class="p-md font-medium text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="striped-row border-b border-outline-variant/50 hover:bg-surface-container-high transition-colors group">
+<td class="p-md text-center text-outline">1</td>
+<td class="p-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold">AJ</div>
+<span class="font-medium text-primary group-hover:underline cursor-pointer">Ada Jane</span>
+</div>
+</td>
+<td class="p-md font-mono text-sm text-on-surface-variant">900123456</td>
+<td class="p-md">Computer Science</td>
+<td class="p-md">Senior</td>
+<td class="p-md text-right">
+<button aria-label="View Details" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="striped-row border-b border-outline-variant/50 hover:bg-surface-container-high transition-colors group">
+<td class="p-md text-center text-outline">2</td>
+<td class="p-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-sm text-label-sm font-bold">CB</div>
+<span class="font-medium text-primary group-hover:underline cursor-pointer">Charles Babbage</span>
+</div>
+</td>
+<td class="p-md font-mono text-sm text-on-surface-variant">900123457</td>
+<td class="p-md">Mathematics</td>
+<td class="p-md">Senior</td>
+<td class="p-md text-right">
+<button aria-label="View Details" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="striped-row border-b border-outline-variant/50 hover:bg-surface-container-high transition-colors group">
+<td class="p-md text-center text-outline">3</td>
+<td class="p-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-bold">GH</div>
+<span class="font-medium text-primary group-hover:underline cursor-pointer">Grace Hopper</span>
+</div>
+</td>
+<td class="p-md font-mono text-sm text-on-surface-variant">900123458</td>
+<td class="p-md">Computer Science</td>
+<td class="p-md">Junior</td>
+<td class="p-md text-right">
+<button aria-label="View Details" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="striped-row border-b border-outline-variant/50 hover:bg-surface-container-high transition-colors group">
+<td class="p-md text-center text-outline">4</td>
+<td class="p-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm font-bold">KT</div>
+<span class="font-medium text-primary group-hover:underline cursor-pointer">Ken Thompson</span>
+</div>
+</td>
+<td class="p-md font-mono text-sm text-on-surface-variant">900123459</td>
+<td class="p-md">Computer Engineering</td>
+<td class="p-md">Senior</td>
+<td class="p-md text-right">
+<button aria-label="View Details" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="striped-row border-b border-outline-variant/50 hover:bg-surface-container-high transition-colors group">
+<td class="p-md text-center text-outline">5</td>
+<td class="p-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-label-sm text-label-sm font-bold">ML</div>
+<span class="font-medium text-primary group-hover:underline cursor-pointer">Margaret Hamilton</span>
+</div>
+</td>
+<td class="p-md font-mono text-sm text-on-surface-variant">900123460</td>
+<td class="p-md">Software Engineering</td>
+<td class="p-md">Junior</td>
+<td class="p-md text-right">
+<button aria-label="View Details" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="p-md border-t border-outline-variant bg-surface flex items-center justify-between">
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                    Showing 1 to 5 of 32 entries
+                </div>
+<div class="flex gap-2">
+<button class="px-3 py-1 border border-outline-variant rounded text-outline hover:bg-surface-container-high transition-colors font-label-sm text-label-sm disabled:opacity-50" disabled="">Previous</button>
+<button class="px-3 py-1 border border-primary bg-primary-container text-on-primary-container rounded font-label-sm text-label-sm font-bold">1</button>
+<button class="px-3 py-1 border border-outline-variant rounded text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-sm text-label-sm">2</button>
+<button class="px-3 py-1 border border-outline-variant rounded text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-sm text-label-sm">3</button>
+<span class="px-2 py-1 text-outline">...</span>
+<button class="px-3 py-1 border border-outline-variant rounded text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-sm text-label-sm">7</button>
+<button class="px-3 py-1 border border-outline-variant rounded text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-sm text-label-sm">Next</button>
+</div>
+</div>
+</div>
+</main>
+</body></html>
