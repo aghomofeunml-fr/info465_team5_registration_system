@@ -6,7 +6,7 @@ https://github.com/aghomofeunml-fr/info465_team5_registration_system.git
 
 Team Member Contributions:
 - [Eileena Doek]: Home Screen / navigation flow
-- [Michael Aghomo Feungue]: Course Search Screen
+- [Michael Aghomo Feungue]: Course Search Screen, Set up Github Repository, Created first drafts of screens
 - [Sinneh Bangura]: Student Registration Screen
 - [Eileena Doek]: Instructor Schedule Screen
 - [Michael Aghomo Feungue]: Session Enrollment Screen
