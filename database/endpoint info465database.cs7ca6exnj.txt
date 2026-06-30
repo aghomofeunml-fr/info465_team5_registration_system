@@ -1,0 +1,8 @@
+endpoint: info465database.cs7ca6exnjxi.us-east-1.rds.amazonaws.com
+port 5432
+Repository: https://github.com/aghomofeunml-fr/info465_team5_registration_system.git
+Group roles 
+o	Database Administrator: Eileena Doek
+o	Data Engineer: Eileena Doek
+o	Quality Assurance (QA) Analyst: Sinneh Bangura
+o	Project Manager: Michael Aghomo
